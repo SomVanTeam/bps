@@ -6,13 +6,13 @@ if (document.title == 'Just a moment...') {
 }
 
 function notif(message, timeout) {
-const config = {
-    text: message,
-    title: "VYPASS",
-    silent: true,
-};
-if (timeout) config.timeout = timeout;
-GM_notification(config);
+    const config = {
+        text: message,
+        title: "VYPASS",
+        silent: true,
+    };
+    if (timeout) config.timeout = timeout;
+    GM_notification(config);
 }
 
 var currentURL = window.location.href;
@@ -31,8 +31,7 @@ if (currentURL.includes("https://linkvertise.com/376138/arceus-x-neo-key-system-
     window.location.replace("https://loot-link.com/s?qlbU");
 } else if (pageTitle.includes("NEO") && pageTitle.includes("3")) {
     window.location.replace(arceusapi + "3&advertiser=linkvertise&OS=ios");
-} else if (document.getElementsByClassName("modal-dialog").length > 0) {
-    notif("Whitelisted successfully. Arceus is malware.", 5);
-    alert("Whitelist successful");
+} else if (currentURL.includes("/key-system-getkey")) {
+    alert("Whitelisted successfully!")
 }
 console.log("Malware bypasser loaded");

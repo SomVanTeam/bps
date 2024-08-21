@@ -29,5 +29,6 @@ if (currentURL.includes("https://linkvertise.com/376138/arceus-x-neo-key-system-
 } else if (pageTitle.includes("NEO") && pageTitle.includes("3")) {
     window.location.replace(arceusapi + "3&advertiser=linkvertise&OS=ios");
 } else if (document.getElementsByClassName("modal-dialog").length > 0) {
-    notif("Whitelisted successfully. Arceus is malware.");
+    notif("Whitelisted successfully. Arceus is malware.", 5);
+    alert("Whitelist successful");
 }

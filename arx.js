@@ -5,7 +5,7 @@ if (document.title == 'Just a moment...') {
 function notif(message, timeout) {
 const config = {
     text: message,
-    title: "INFO",
+    title: "VYPASS",
     silent: true,
 };
 if (timeout) config.timeout = timeout;
@@ -28,5 +28,6 @@ if (currentURL.includes("https://linkvertise.com/376138/arceus-x-neo-key-system-
     window.location.replace("https://loot-link.com/s?qlbU");
 } else if (pageTitle.includes("NEO") && pageTitle.includes("3")) {
     window.location.replace(arceusapi + "3&advertiser=linkvertise&OS=ios");
-    alert("TEST");
+} else if (document.getElementsByClassName("modal-dialog").length > 0) {
+    notif("Whitelisted successfully. Arceus is malware.");
 }

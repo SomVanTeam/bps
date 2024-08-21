@@ -1,5 +1,8 @@
 if (document.title == 'Just a moment...') {
-    return;
+    await sleep(2000);
+    if (document.title == 'Just a moment...') {
+        return;
+    }
 }
 
 function notif(message, timeout) {

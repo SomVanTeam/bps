@@ -2,6 +2,16 @@ if (document.title == 'Just a moment...') {
     return;
 }
 
+function notif(message, timeout) {
+const config = {
+    text: message,
+    title: "INFO",
+    silent: true,
+};
+if (timeout) config.timeout = timeout;
+GM_notification(config);
+}
+
 var currentURL = window.location.href;
 var newerURL = currentURL.replace('https://linkvertise.com/376138/arceus-x-neo-key-system-1?o=sharing', 'https://lootdest.com/s?qljL');
 var pageTitle = document.title;

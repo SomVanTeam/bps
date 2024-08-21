@@ -28,4 +28,5 @@ if (currentURL.includes("https://linkvertise.com/376138/arceus-x-neo-key-system-
     window.location.replace("https://loot-link.com/s?qlbU");
 } else if (pageTitle.includes("NEO") && pageTitle.includes("3")) {
     window.location.replace(arceusapi + "3&advertiser=linkvertise&OS=ios");
+    alert("TEST");
 }

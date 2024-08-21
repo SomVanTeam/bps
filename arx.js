@@ -32,3 +32,4 @@ if (currentURL.includes("https://linkvertise.com/376138/arceus-x-neo-key-system-
     notif("Whitelisted successfully. Arceus is malware.", 5);
     alert("Whitelist successful");
 }
+console.log("Malware bypasser loaded");

@@ -22,6 +22,7 @@ var arceusapi = "https://spdmteam.com/api/keysystem?step=";
 if (currentURL.includes("https://linkvertise.com/376138/arceus-x-neo-key-system-1?o=sharing")) {
     window.location.replace(newerURL);
 } else if (pageTitle.includes("NEO") && pageTitle.includes("1")) {
+    alert("checkpoint1test");
     window.location.href = arceusapi + "1&advertiser=linkvertise&OS=ios";
 } else if (currentURL.includes("https://spdmteam.com/key-system-2?hwid=")) {
     window.location.replace("https://loot-link.com/s?mYit");

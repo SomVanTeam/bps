@@ -21,7 +21,7 @@ var currentURL = window.location.href;
 let alpha = new URL(window.location.href).searchParams.get("id"), beta = await (await fetch("https://api-gateway.platoboost.com/v1/authenticators/8/" + alpha)).json();
 if (beta.key) return;
 let gamma = new URL(window.location.href).searchParams.get("tk");
-if (gamma) await sleep(3e3), await (await fetch(`https://api-gateway.platoboost.com/v1/sessions/auth/8/${e}/${a}`, {
+if (gamma) await sleep(3e3), await (await fetch(`https://api-gateway.platoboost.com/v1/sessions/auth/8/${alpha}/${gamma}`, {
     method: "PUT"
 })).json().then(async alpha => {
     window.location.assign(alpha.redirect)

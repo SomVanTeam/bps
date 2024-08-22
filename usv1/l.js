@@ -2,22 +2,9 @@ var s_e = true
 if (document.title == 'Just a moment...') {
     return;
 }
-
-function notif(message, timeout) {
-    const config = {
-        text: message,
-        title: "VYPASS",
-        silent: true,
-    };
-    if (timeout) config.timeout = timeout*1000;
-    GM_notification(config);
-}
-
 if (s_e!=true) {
     return;
 }
-const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-var currentURL = window.location.href;
 function linkspf(link) {
   return new Promise((resolve, reject) => {
     GM.xmlHttpRequest({
@@ -30,10 +17,10 @@ function linkspf(link) {
   });
 }
 function linkver() {
-  notif("Waiting 10 seconds before bypassing...",9)
-  await sleep(10000)
+  gmnotifdecl("Waiting 10 seconds before bypassing...",9)
+  await gmsleepdecl(10000)
   try {
-    let response = await fetch("https://api.bypass.vip/bypass?url=" + currentURL);
+    let response = await fetch("https://api.bypass.vip/bypass?url=" + gmcurrentURLdecl);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }

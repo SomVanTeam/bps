@@ -40,8 +40,8 @@ else {
             })
          });
     zeta = await zeta.json(), await sleep(1e3);
-    let s = await (await fetch(`https://bypass.rblx.workers.dev/delta-decrypt?url=${encodeURIComponent(n.redirect)}`)).text(),
-        i = new URL(s).searchParams.get("r"),
-        c = atob(i);
-    window.location.assign(c)
+    let eta = await (await fetch(`https://bypass.rblx.workers.dev/delta-decrypt?url=${encodeURIComponent(n.redirect)}`)).text(),
+        theta = new URL(eta).searchParams.get("r"),
+        iota = atob(theta);
+    window.location.assign(iota)
 }

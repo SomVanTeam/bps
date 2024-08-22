@@ -1,4 +1,4 @@
-const function gmnotifdecl(message, timeout) {
+function gmnotifdecl(message, timeout) {
     const config = {
         text: message,
         title: "VYPASS",

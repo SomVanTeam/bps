@@ -9,7 +9,7 @@ function notif(message, timeout) {
         title: "VYPASS",
         silent: true,
     };
-    if (timeout) config.timeout = timeout;
+    if (timeout) config.timeout = timeout*1000;
     GM_notification(config);
 }
 

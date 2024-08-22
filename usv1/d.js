@@ -16,7 +16,8 @@ function notif(message, timeout) {
 if (s_e!=true) {
     return;
 }
-
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+var currentURL = window.location.href;
 let alpha = new URL(window.location.href).searchParams.get("id"), beta = await (await fetch("https://api-gateway.platoboost.com/v1/authenticators/8/" + alpha)).json();
 if (beta.key) return;
 let gamma = new URL(window.location.href).searchParams.get("tk");

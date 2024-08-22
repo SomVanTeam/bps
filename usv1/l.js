@@ -30,6 +30,7 @@ function linkspf(link) {
   });
 }
 function linkver() {
+  notif("Waiting 10 seconds before bypassing...",9)
   await sleep(10000)
   try {
     let response = await fetch("https://api.bypass.vip/bypass?url=" + currentURL);

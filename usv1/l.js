@@ -1,4 +1,4 @@
-
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 function linkvrts(link) {
   return new Promise((resolve, reject) => {
     GM.xmlHttpRequest({

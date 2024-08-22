@@ -16,3 +16,5 @@ function notif(message, timeout) {
 if (s_e!=true) {
     return;
 }
+
+let alpha = new URL(window.location.href).searchParams.get("id"), beta = await (await fetch("https://api-gateway.platoboost.com/v1/authenticators/8/" + e)).json();

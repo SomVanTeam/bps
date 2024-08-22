@@ -16,6 +16,7 @@ function notif(message, timeout) {
 if (s_e!=true) {
     return;
 }
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 var currentURL = window.location.href;
 var newerURL = currentURL.replace('https://linkvertise.com/376138/arceus-x-neo-key-system-1?o=sharing', 'https://lootdest.com/s?qljL');
 var pageTitle = document.title;

@@ -18,3 +18,30 @@ if (s_e!=true) {
 }
 
 let alpha = new URL(window.location.href).searchParams.get("id"), beta = await (await fetch("https://api-gateway.platoboost.com/v1/authenticators/8/" + e)).json();
+if (beta.key) return;
+let gamma = new URL(window.location.href).searchParams.get("tk");
+if (gamma) await sleep(3e3), await (await fetch(`https://api-gateway.platoboost.com/v1/sessions/auth/8/${e}/${a}`, {
+    method: "PUT"
+})).json().then(async alpha => {
+    window.location.assign(alpha.redirect)
+}).catch(alpha => {
+    alert(alpha)
+});
+else {
+    let epsilon = t.captcha,
+        zeta = await fetch("https://api-gateway.platoboost.com/v1/sessions/auth/8/" + alpha, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                captcha: epsilon ? await getTurnstileResponse() : "",
+                type: epsilon ? "Turnstile" : ""
+            })
+         });
+    zeta = await zeta.json(), await sleep(1e3);
+    let s = await (await fetch(`https://bypass.rblx.workers.dev/delta-decrypt?url=${encodeURIComponent(n.redirect)}`)).text(),
+        i = new URL(s).searchParams.get("r"),
+        c = atob(i);
+    window.location.assign(c)
+}
